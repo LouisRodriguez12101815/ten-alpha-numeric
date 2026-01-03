@@ -26,3 +26,29 @@ You can change `DEFAULT_OUTPUT_STYLE` in `excel/PhoneNumberFormatter.bas` to:
 - `"dash"`
 - `"paren"`
 - `"e164"`
+
+## Google Sheets (Apps Script)
+Equivalent Google Sheets code lives here:
+- `google-sheets/PhoneNumberFormatter.gs`
+
+### How to use
+1. Open your Google Sheet.
+2. Go to `Extensions` → `Apps Script`.
+3. Create a new script file (or replace `Code.gs`) and paste in the contents of `google-sheets/PhoneNumberFormatter.gs`.
+4. Save.
+5. Reload the spreadsheet.
+6. Use the new menu: `Phone Formatter` →
+   - `Format phone numbers (active sheet)` or
+   - `Format phone numbers (all sheets)`
+
+### Custom function (optional)
+You can also normalize a single cell with:
+- `=NORMALIZE_PHONE_USCA(A2)`
+
+### Output format
+Default output is **10 digits**.
+To change it, set `DEFAULT_OUTPUT_STYLE` in `google-sheets/PhoneNumberFormatter.gs` to:
+- `"digits"`
+- `"dash"`
+- `"paren"`
+- `"e164"`
